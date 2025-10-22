@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sarah_Cobirzan_lab2.Data;
 
@@ -11,9 +12,11 @@ using Sarah_Cobirzan_lab2.Data;
 namespace Sarah_Cobirzan_lab2.Migrations
 {
     [DbContext(typeof(Sarah_Cobirzan_lab2Context))]
-    partial class Sarah_Cobirzan_lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20251015125741_BookCategory")]
+    partial class BookCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
