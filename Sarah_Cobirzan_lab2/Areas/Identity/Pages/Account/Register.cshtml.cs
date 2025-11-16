@@ -131,7 +131,8 @@ namespace Sarah_Cobirzan_lab2.Areas.Identity.Pages.Account
             if (result.Succeeded)
             {
                 _logger.LogInformation("User created a new account with password.");
- var userId = await _userManager.GetUserIdAsync(user);
+                var role = await _userManager.AddToRoleAsync(user, "User");
+                var userId = await _userManager.GetUserIdAsync(user);
                 var code = await
                _userManager.GenerateEmailConfirmationTokenAsync(user);
                 code =

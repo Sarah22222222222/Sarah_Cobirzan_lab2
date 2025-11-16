@@ -33,7 +33,7 @@ namespace Sarah_Cobirzan_lab2.Pages.Books
             Book = await _context.Book
                 .Include(b => b.Publisher)
                 .Include(b => b.BookCategories)
-                    .ThenInclude(bc => bc.Category)
+                .ThenInclude(bc => bc.Category)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.ID == id);
 
