@@ -20,5 +20,7 @@ namespace Sarah_Cobirzan_lab2.Data
         public DbSet<Sarah_Cobirzan_lab2.Models.Category> Category { get; set; } = default!;
         public DbSet<Sarah_Cobirzan_lab2.Models.Member> Member { get; set; } = default!;
         public DbSet<Sarah_Cobirzan_lab2.Models.Borrowing> Borrowing { get; set; } = default!;
+
+
     }
 }
